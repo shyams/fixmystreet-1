@@ -44,3 +44,31 @@ html, body {
   text-align: right;
   padding-right: 1em;
 }
+
+#reportandfix {
+  padding-top: 50px;
+  height: 100%;
+}
+
+/*menu buttons at the Front Page*/
+.frontMenuButton .fa-chevron-right {
+  float: right;
+  margin-top: 2px;
+  margin-right: -6px;
+  opacity: .90;
+  display: inline-block;
+} 
+
+a.list-group-item-frontMenuButton {
+  text-decoration: none;
+}
+
+.list-group-item-frontMenuButton {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  margin-bottom: -1px;
+  border: 1px solid #ddd;
+}
+
+
