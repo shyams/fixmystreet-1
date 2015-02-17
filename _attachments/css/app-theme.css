@@ -1,13 +1,12 @@
 #header {
-	background-color: #159690;
+  background-color: #159690;
 }
 .frontMenuButton { 
-	padding-top:10px;
+  padding-top:10px;
 } 
 a.list-group-item-frontMenuButton {
-	color: #fff;
-	text-decoration: none;
+  color: #fff;
 }
 .list-group-item-frontMenuButton{
-	background-color: #159690;
+  background-color: #159690;
 }
