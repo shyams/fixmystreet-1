@@ -1,10 +1,8 @@
 function (cb, e, params) {
-  console.log()
   var url = '_view/issues?include_docs=true';
   var sortedData = {"rows": []};
 
   $.getJSON(url, function (data) {
-    
     var rows = data.rows;
     for (var i = 0; i < rows.length; i++) {
       var doc = rows[i].doc;
