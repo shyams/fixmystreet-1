@@ -94,14 +94,17 @@ a.list-group-item-frontMenuButton {
 }
  @media (min-width:320px) and (max-width:1024px) {
 #reportandfix {
+  position: relative;
   padding-left: 0px;
   padding-right: 0px;
 }
 #forntMenuRow {
+  position: relative;
   margin-left: 0px;
   margin-right: 0px;
 }
 #frontMenuColoumns {
+  position: relative;
   padding-left: 0px;
   padding-right: 0px;
 }
