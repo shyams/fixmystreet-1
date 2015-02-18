@@ -10,3 +10,14 @@ a.list-group-item-frontMenuButton {
 .list-group-item-frontMenuButton {
   background-color: #159690;
 }
+
+#clr a, #clr a:hover {
+  color: #3d3d3d;
+}
+
+#clr li, #clr li:hover {
+  color: #3d3d3d;
+}
+#clr .menu-item-head {
+  padding: 3px 20px;
+}
