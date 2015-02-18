@@ -1,0 +1,6 @@
+{
+  "PathToMaptiles": "" //relative or absolute path to tiles db,
+  "ProfilesDB": "",
+  "issue-database": "fixmystreet-test",
+  "issue-design-doc": "website"
+}
