@@ -92,7 +92,7 @@ a.list-group-item-frontMenuButton {
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.176);
   background-clip: padding-box;
 }
- @media (min-width:320px) and (max-width:1024px) {
+@media (min-width:320px) and (max-width:1024px) {
 #reportandfix {
   position: relative;
   padding-left: 0px;
