@@ -20,7 +20,8 @@ function (data, e) {
     },
     "title": "Issues",
     "right": {
-      "icon": "fa-user"
+      "icon": "fa-user",
+      "href": "#/profile"
     } 
   }]);
   return viewdata;

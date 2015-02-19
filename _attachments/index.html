@@ -22,11 +22,12 @@
       $.couch.app(function(app) {
         $("#header").evently("navbar", app);
         $("#reportandfix").evently("reportandfix", app);
+        $.evently.connect('#reportandfix','#header', ['rendernav']);
       }, {
         "db": "fixmystreet",
         "design": "reportandfix"
       });
-
+      $.pathbinder.go('/reportandfix');
     </script>
     <script type="text/javascript">
       //add Gauges
