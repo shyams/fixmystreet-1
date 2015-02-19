@@ -1,0 +1,27 @@
+
+<div class="panel panel-default">
+  <div class="panel-body">
+  {{#issueDetails}}
+
+    <div class="row form-group">
+      <div id="detailImage" style="background: url('../../{{image}}') no-repeat;">
+      </div>
+    </div>
+    <h4>
+      <strong>
+      <span class="label label-primary" id="number">#{{issue_number}}</span>
+        <span > - </span>&nbsp;
+        <span>{{status}}</span>
+      </strong>
+    </h4>
+    
+    <div class="form-group">
+      <p id="description">{{description}}</p>
+    </div>
+    <div id="latlon" lat="{{lat}}" lon="{{lon}}"></div>
+    {{/issueDetails}}
+    <div class="row">
+      <div id="map"></div>
+    </div>
+  </div>
+</div>

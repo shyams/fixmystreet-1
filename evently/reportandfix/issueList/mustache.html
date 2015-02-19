@@ -1,0 +1,13 @@
+<div class="list-group issueListButton">
+  {{#issues}}
+    <a class="list-group-item-issueListButton" doc-id="{{docId}}" data-id="issueList">
+      <i class="fa-chevron-right fa"></i>
+      <p>
+        <small><strong>{{opened_at}} by {{username}}</strong></small>
+       <br>
+        <span class="label label-primary" id="number">#{{issue_number}}</span> - <strong>{{category}}</strong><br>
+        <small><strong>{{description}} ..</strong></small>
+      </p>
+    </a>
+  {{/issues}}
+</div>

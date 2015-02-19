@@ -4,10 +4,10 @@ html, body {
 #header {
   background-color: #159690;
 }
-a.list-group-item-frontMenuButton {
+a.list-group-item-frontMenuButton, a.list-group-item-issueListButton {
   color: #fff;
 }
-.list-group-item-frontMenuButton {
+.list-group-item-frontMenuButton, .list-group-item-issueListButton {
   background-color: #159690;
 }
 
