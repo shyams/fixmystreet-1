@@ -23,6 +23,9 @@ html, body {
      -moz-box-shadow: 0 6px 10px -5px black;
           box-shadow: 0 6px 10px -5px black;
 }
+.hidden {
+  display: none;
+}
 
 #nav-mobile {
   height: 40px;
@@ -91,4 +94,39 @@ a.list-group-item-frontMenuButton {
   border-radius: 4px;
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.176);
   background-clip: padding-box;
+}
+
+/* report new issue */
+#reportNewIssue{
+  padding-top: 10px;
+}
+
+/* custom file input */
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  content: 'Picture';
+  display: inline-block;
+  background: -webkit-linear-gradient(top, #f3f3f3, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #000;
+  font-weight: 700;
+  font-size: 10pt;
+}
+.custom-file-input:hover::before {
+  border-color: black;
+}
+.custom-file-input:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+
+.custom-file-input{
+  color: transparent;
 }
