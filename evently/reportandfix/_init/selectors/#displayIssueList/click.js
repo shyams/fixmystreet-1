@@ -1,3 +1,0 @@
-function () {
-  $.pathbinder.go('/issuelist');
-}
