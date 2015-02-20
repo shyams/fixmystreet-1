@@ -8,6 +8,7 @@ function () {
     "title": "Report and FIx",
     "right": {
       "icon": "fa-user",
+      "href": "#/profile"
     }
   }]);
 }

@@ -6,7 +6,6 @@ function (cb, e, params) {
   var url = '_view/issues?key="' + issueId + '"&include_docs=true';
 
   $.getJSON(url, function (data) {
-    console.log(data);
     cb(data);
   })
 }

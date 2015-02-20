@@ -66,14 +66,23 @@ a.list-group-item-frontMenuButton, a.list-group-item-issueListButton {
   text-decoration: none;
 }
 
-.list-group-item-frontMenuButton, .list-group-item-issueListButton {
+.list-group-item-frontMenuButton {
   position: relative;
   display: block;
   padding: 10px 15px;
   margin-bottom: -1px;
   border: 1px solid #ddd;
+  cursor: pointer;
 }
-
+  /*issue list*/
+.list-group-item-issueListButton {
+  position: relative;
+  display: block;
+  padding: 3px 15px;
+  margin-bottom: -1px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
 .space {
   margin-top: -14px;
 }
@@ -94,7 +103,7 @@ a.list-group-item-frontMenuButton, a.list-group-item-issueListButton {
 /*List buttons at the Issues List page*/
 .issueListButton .fa-chevron-right {
   float: right;
-  margin-top: 20px;
+  margin-top: 25px;
   margin-right: -6px;
   opacity: .90;
   display: inline-block;
