@@ -1,3 +1,3 @@
-function () {
-	$(this).pathbinder('storeNewIssue','/saveNewIssue')
+function() {
+  $(this).pathbinder('storeNewIssue', '/saveNewIssue')
 }

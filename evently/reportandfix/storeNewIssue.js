@@ -1,6 +1,19 @@
-function(e, params) {
-  var issueUUID = $.couch.newUUID();
-  createAndSaveNewIssue(issueUUID);
+function (e, params) {
+  $.couch.session({
+    success : function(r) {
+      var userCtx = r.userCtx;
+      if (userCtx.name) {
+        var issueUUID = $.couch.newUUID();
+        createAndSaveNewIssue(issueUUID, userCtx.id, userCtx.name);
+      } else {
+        var issueUUID = $.couch.newUUID();
+        var usr_id = '';
+        var usr_name = 'Anonymous';
+        createAndSaveNewIssue(issueUUID, usr_id, usr_name);
+      };
+    }
+  });
+  
 }
 
 function isInputMissing() {
@@ -31,7 +44,7 @@ function isInputMissing() {
 
 }
 
-function createAndSaveNewIssue(id) {
+function createAndSaveNewIssue(id, usr_id, usr_name) {
   var newIssueDoc = {};
 
   var missingIput = isInputMissing();
@@ -43,7 +56,7 @@ function createAndSaveNewIssue(id) {
     var place = $('#place').html();
     var desc = $('#desc').val();
     var category = $('#category').val();
-    var catId = $('#category').attr('data-id');
+    var catId = $('#category option:selected').attr('data-id');
     var issueNumber = Math.floor(Math.random() * 900000) + 100000;
     var imageInput = $('#imageUpload').val();
     var file = $('#imageUpload')[0].files[0];
@@ -57,6 +70,8 @@ function createAndSaveNewIssue(id) {
     };
 
     newIssueDoc._id = id;
+    newIssueDoc.usr_id = usr_id;
+    newIssueDoc.usr_name = usr_name;
     newIssueDoc.number = issueNumber + "";
     newIssueDoc.lat = lat + "";
     newIssueDoc.lng = lng + "";
@@ -65,6 +80,8 @@ function createAndSaveNewIssue(id) {
     newIssueDoc.cat_name = category;
     newIssueDoc.title = title;
     newIssueDoc.desc = desc;
+    newIssueDoc.type = "issue";
+    newIssueDoc.opened_at = moment().format();
     newIssueDoc.channel = "publicpointer";
 
     saveNewIssue(newIssueDoc, id);
@@ -73,7 +90,7 @@ function createAndSaveNewIssue(id) {
 
 function saveNewIssue(newIssueDoc, id) {
   var state = $$('#reportandfix');
-  var db = state.app.db
+  var db = state.app.db;
 
   db.saveDoc(newIssueDoc, {
     success: function(savedDoc) {

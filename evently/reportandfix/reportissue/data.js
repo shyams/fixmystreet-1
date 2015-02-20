@@ -1,4 +1,4 @@
-function(data, e, params) {
+function (data, e, params) {
   var rows = data.rows;
   var viewdata = {
     "issueCategories": []
@@ -6,19 +6,16 @@ function(data, e, params) {
 
   for (var i = 0; i < rows.length; i++) {
     var row = rows[i];
-    var doc = row.doc;
     viewdata.issueCategories.push({
       "cat_id": row.id,
-      "cat_name": row.value.name,
-      "lat": doc.lat,
-      "long": doc.lng
+      "cat_name": row.key
     })
   }
 
   $(this).trigger('rendernav', [{
     "left": {
       "icon": "fa-chevron-left",
-      "href": "#/issuelist"
+      "href": "#/reportandfix"
     },
     "title": "Report Issue",
     "right": {
@@ -26,6 +23,5 @@ function(data, e, params) {
       "href": "#/saveNewIssue"
     }
   }]);
-
   return viewdata;
 }
