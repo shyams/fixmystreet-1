@@ -1,0 +1,40 @@
+<div id="reportNewIssue" class="col-md-12 col-sm-12 col-xs-12 col-sm-12">
+  <div class="text-danger hidden" id="saveIssue-error">Error saving new issue</div>
+  <form role="form" id="issueForm">
+    <div class="form-group">
+      <input type="hidden" id="lat" value="">
+      <input type="hidden" id="lng" value="">
+      <label for="category">Category</label>
+      <div class="text-danger" id="category-error"></div>
+      <select id="category" class="form-control">
+        <option value="">choose a catgeory</option>
+        {{#issueCategories}}
+          <option value="{{cat_name}}" data-id="{{cat_id}}">{{cat_name}}</option>
+        {{/issueCategories}}
+      </select>
+    </div>
+
+    <div class="form-group">
+        <label for="desc">Description</label>
+        <div class="text-danger" id="desc-error"></div>
+        <textarea id="desc" class="form-control" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+        <div class="text-danger" id="issueImg-error"></div>
+        <input id="imageUpload" type="file" name="issue" accept="jpg, jpeg" class="custom-file-input">
+        <input type="hidden" id="issueImg" value="">
+    </div>
+    <div class="form-group" data-provides="fileinput">
+      <img id="issueImg-preview" src="" class="hidden img-thumbnail"></img>
+    </div>
+    <div class="form-group row" id="userProfiles"></div>
+    <div class="form-group row">
+      <div class="col-md-12 col-sm-12 col-xs-12 col-sm-12">
+        <label for="place">Location</label>
+      </div>
+      <div class="col-md-12 col-sm-12 col-xs-12 col-sm-12">
+        <button id="place" type="button" class="btn btn-primary col-md-12 col-sm-12 col-xs-12 col-sm-12" style="white-space: normal;">Getting your Current Location</button>
+      </div>
+    </div>
+  </form>
+</div>

@@ -13,5 +13,6 @@ couchapp_load([
   "js/jquery.evently.js",
   "js/jquery.pathbinder.js",
   "js/bootstrap.min.js",
-  "js/leaflet.js"
+  "js/leaflet.js",
+  "js/moment.min.js"
 ]);
