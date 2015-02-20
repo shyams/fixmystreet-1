@@ -7,7 +7,7 @@ function (e, params) {
         createAndSaveNewIssue(issueUUID, userCtx.id, userCtx.name);
       } else {
         var issueUUID = $.couch.newUUID();
-        var usr_id = '';
+        var usr_id = 'Anonymous';
         var usr_name = 'Anonymous';
         createAndSaveNewIssue(issueUUID, usr_id, usr_name);
       };
