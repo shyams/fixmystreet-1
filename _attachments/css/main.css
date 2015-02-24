@@ -171,3 +171,21 @@ a.list-group-item-frontMenuButton, a.list-group-item-issueListButton {
 .custom-file-input{
   color: transparent;
 }
+@media (min-width:320px) and (max-width:1024px) {
+  #reportandfix {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  #forntMenuRow {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  #frontMenuColoumns {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+#chart svg {
+  height: 220px;
+  width: 410px;
+}

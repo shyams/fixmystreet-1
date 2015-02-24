@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/font-awesome.min.css"/>
     <link rel="stylesheet" href="css/leaflet.css"/>
+    <link rel="stylesheet" href="css/nv.d3.css"/>
     <link rel="stylesheet" href="css/main.css"/>
     <link rel="stylesheet" href="css/app-theme.css"/>
     
@@ -23,7 +24,6 @@
         $("#header").evently("navbar", app);
         $("#reportandfix").evently("reportandfix", app);
         $.evently.connect('#reportandfix','#header', ['rendernav']);
-
       }, {
         "db": "fixmystreet",
         "design": "reportandfix"
