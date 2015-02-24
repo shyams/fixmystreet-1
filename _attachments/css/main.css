@@ -71,8 +71,13 @@ a.list-group-item-frontMenuButton, a.list-group-item-issueListButton {
   display: block;
   padding: 10px 15px;
   margin-bottom: -1px;
-  border: 1px solid #ddd;
+  border-top: 1px solid #ddd;
   cursor: pointer;
+  border-left: 0px;
+  border-right: 0px;
+}
+.list-group-item-frontMenuButton:first-child {
+  border-top: 0px;
 }
   /*issue list*/
 .list-group-item-issueListButton {
@@ -80,8 +85,13 @@ a.list-group-item-frontMenuButton, a.list-group-item-issueListButton {
   display: block;
   padding: 3px 15px;
   margin-bottom: -1px;
-  border: 1px solid #ddd;
+  border-top: 1px solid #ddd;
   cursor: pointer;
+  border-left: 0px;
+  border-right: 0px;
+}
+.list-group-item-issueListButton:first-child {
+  border-top: 0px;
 }
 .space {
   margin-top: -14px;
@@ -160,6 +170,24 @@ a.list-group-item-frontMenuButton, a.list-group-item-issueListButton {
 
 .custom-file-input{
   color: transparent;
+}
+@media (min-width:320px) and (max-width:1024px) {
+  #reportandfix {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  #forntMenuRow {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  #frontMenuColoumns {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+#chart svg {
+  height: 220px;
+  width: 410px;
 }
 #map-view {
   width: 100%;
