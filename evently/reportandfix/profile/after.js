@@ -1,4 +1,4 @@
-function () {
+function (e) {
   var state = $$(this);
    if (!$$('#account').evently) {
     $("#account").evently("account", state.app);
@@ -9,11 +9,10 @@ function () {
   } else {
     $("#account").trigger("_init");
   }
-
   $(this).trigger('rendernav', [{ 
     "left": {
       "icon": "fa-times",
-      "href": "#/reportandfix" 
+      "href": "javascript:history.back()"
     },
     "title": "Issues",
     "right": {
@@ -21,4 +20,5 @@ function () {
       "href": "#/profile"
     } 
   }]);
+  state.viewType = "app";
 }

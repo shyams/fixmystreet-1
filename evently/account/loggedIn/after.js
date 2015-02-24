@@ -1,3 +1,3 @@
 function () {
-  $.pathbinder.go('/issuelist');
+  javascript:history.back();
 }

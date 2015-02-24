@@ -33,11 +33,12 @@ function (data, e, params) {
   $(this).trigger('rendernav', [{ 
     "left": {
       "icon": "fa-chevron-left",
-      "href": "#/issuelist" 
+      "href": "javascript:history.back()" 
     },
     "title": "Issues",
     "right": {
-      "icon": "fa-user"
+      "icon": "fa-user",
+      "href": "#/profile"
     } 
   }]);
   return viewdata;

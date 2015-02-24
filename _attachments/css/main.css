@@ -161,3 +161,15 @@ a.list-group-item-frontMenuButton, a.list-group-item-issueListButton {
 .custom-file-input{
   color: transparent;
 }
+#map-view {
+  width: 100%;
+  height: 100%;
+}
+@media (min-width:990px) and (max-width:1450px) {
+ .col-md-4 {
+   width: 48%;
+  }
+  .col-md-offset-4 {
+    margin-left: 25%;
+  }
+}

@@ -10,7 +10,8 @@ function (data, e) {
       "docId":  rows[i].docId,
       "issue_number": rows[i].number,
       "description": rows[i].desc,
-      "username": rows[i].username
+      "username": rows[i].username,
+      "image": rows[i].image
     })
   };
   $(this).trigger('rendernav', [{ 
