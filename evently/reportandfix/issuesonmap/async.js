@@ -3,18 +3,5 @@ function (cb, e, params) {
 
   $.getJSON(url, function (data) {
     cb(data);
-  });
-
-  $('#reportandfix').css('padding-top', '0px');
-  $(this).trigger('rendernav', [{ 
-    "left": {
-      "icon": "fa-chevron-left",
-      "href": "#/removemapview/reportandfix/frontpage" 
-    },
-    "title": "Issues",
-    "right": {
-      "icon": "fa-user",
-      "href": "#/removemapview/profile/mapview"
-    } 
-  }]);
+  })  
 }
