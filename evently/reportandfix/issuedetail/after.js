@@ -30,7 +30,7 @@ function () {
     attributionControl: false
   })
 
-  L.tileLayer(config.PathToMaptiles + '/{z}_{x}_{y}/tile.png',{
+  L.tileLayer('https://{s}.tiles.mapbox.com/v3/examples.map-i875mjb7/{z}/{x}/{y}.png',{
       reuseTiles: true,
     detectRetina: true
   }).addTo(map);
